@@ -1,0 +1,465 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: url("0.jpg");
+    /*background-size: 100% 100%;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+    font-family: "Mircosoft YaHei";
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    margin: 20px;
+}
+/*定义整个三个块综合起来的块的大小，如果缺失main则会排版混鲁昂*/
+.main{
+    margin: 0 auto;
+    width: 1250px;
+    height: 720px;
+}
+/*定义左边块的大小，否则将会按照代码顺序使得界面呈上下分布形式*/
+.left{
+    width: 300px;
+    height: 700px;
+    float: left;
+}
+.center{
+    width: 700px;
+    height:700px;
+    float: left;
+
+}
+.right{
+    width: 250px;
+    height: 700px;
+    color: red;
+    float: right;
+}
+/*用于将目标图片变小*/
+#smallpic{
+    width: 250px;
+    height: 250px;
+    margin-left: 15px;
+}
+/*定义左边块中的时间标签的位置和大小*/
+label{
+    margin-left: 10px;
+    font-size: 25px;
+}
+span{
+    color:red;
+    font-size: 25px;
+}
+select{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.left h3{
+    text-align: center;
+}
+
+#restart{
+    display: block;
+    margin: 40px auto;
+    background-color: #4286F5;
+    /*text-align: center;*/
+    color: white;
+    width: 130px;
+    height: 45px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px 5px #999999;
+
+}
+#restart:active{
+    background-color: #aa100a;
+}
+
+
+
+
+/*貌似这个没啥作用，还未发现*/
+#fifteen{
+    /*用于装中间分隔的整个图案的容器的大小*/
+    /*width: 360px;*/
+    /*height: 360px;*/
+    width: 650px;
+    height: 650px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+#fifteen2{
+    /*用于装中间分隔的整个图案的容器的大小*/
+    /*width: 360px;*/
+    /*height: 360px;*/
+    width: 650px;
+    height: 650px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+
+}
+
+#fifteen div{ /*这个的意思是含fifteen的这个div块的选取*/
+    /*这个的大小要比下面的行和列的大小稍微小些*/
+    /*width: 86px;*/
+    /*height: 86px;*/
+    /*这个大小的修改会直接影响界面中显示出的图案的大小，但是并不会使得图案是在整个图的基础上进行显示的，只是截取了一部分显示*/
+    width: 158px;
+    height: 158px;
+    border: 1px solid #CCCCCC;
+    margin: 1px;
+    background-image: url(p1.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+#fifteen2 div{
+    width: 78px;
+    height: 78px;
+    border: 1px solid #CCCCCC;
+    margin: 1px;
+    background-image: url(p1.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+
+}
+/*用于在鼠标放于图片上时变成手形状的*/
+#fifteen>div:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+#fifteen2>div:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+
+/*这些输入预设定的样式表，是服务于在js中修改的对象的*/
+/*原始数据*/
+/*.row1 {top: 0px;}*/
+/*.row2 {top: 88px;}*/
+/*.row3 {top: 176px;}*/
+/*.row4 {top: 264px;}*/
+/*.col1 {left: 0px;}*/
+/*.col2 {left: 88px;}*/
+/*.col3 {left: 176px;}*/
+/*.col4 {left: 264px;}*/
+/*这是用于确定中间的表格的行和列的大小的，修改此处会直接使得中间图案的空间变大，但是图案并没有变大*/
+.row1 {top: 0px;}
+.row2 {top: 160px;}
+.row3 {top: 320px;}
+.row4 {top: 480px;}
+.col1 {left: 0px;}
+.col2 {left: 160px;}
+.col3 {left: 320px;}
+.col4 {left: 480px;}
+
+.row2_1 {top: 0px;}
+.row2_2 {top: 80px;}
+.row2_3 {top: 160px;}
+.row2_4 {top: 240px;}
+.row2_5 {top: 320px;}
+.row2_6 {top: 400px;}
+.row2_7 {top: 480px;}
+.row2_8 {top: 560px;}
+.col2_1 {left: 0px;}
+.col2_2 {left: 80px;}
+.col2_3 {left: 160px;}
+.col2_4 {left: 240px;}
+.col2_5 {left: 320px;}
+.col2_6 {left: 400px;}
+.col2_7 {left: 480px;}
+.col2_8 {left: 560px;}
+
+/*这个应该根据原图的大小进行切割*/
+#pic1 {background-position: -0px 0px;}
+#pic2 {background-position: -160px 0px;}
+#pic3 {background-position: -320px 0px;}
+#pic4 {background-position: -480px 0px;}
+#pic5 {background-position: 0px -160px;}
+#pic6 {background-position: -160px -160px;}
+#pic7 {background-position: -320px -160px;}
+#pic8 {background-position: -480px -160px;}
+#pic9 {background-position: 0px -320px;}
+#pic10 {background-position: -160px -320px;}
+#pic11 {background-position: -320px -320px;}
+#pic12 {background-position: -480px -320px;}
+#pic13 {background-position: 0px -480px;}
+#pic14 {background-position: -160px -480px;}
+#pic15 {background-position: -320px -480px;}
+#fifteen #empty {border: none; background: none;}
+
+
+#pic2_1 {background-position: -0px 0px;}
+#pic2_2 {background-position: -80px 0px;}
+#pic2_3 {background-position: -160px 0px;}
+#pic2_4 {background-position: -240px 0px;}
+#pic2_5 {background-position: -320px 0px;}
+#pic2_6 {background-position: -400px 0px;}
+#pic2_7 {background-position: -480px 0px;}
+#pic2_8 {background-position: -560px 0px;}
+#pic2_9 {background-position: 0px -80px;}
+#pic2_10 {background-position: -80px -80px;}
+#pic2_11 {background-position: -160px -80px;}
+#pic2_12 {background-position: -240px -80px;}
+#pic2_13 {background-position: -320px -80px;}
+#pic2_14 {background-position: -400px -80px;}
+#pic2_15 {background-position: -480px -80px;}
+#pic2_16 {background-position: -560px -80px;}
+#pic2_17 {background-position: 0px -160px;}
+#pic2_18 {background-position: -80px -160px;}
+#pic2_19 {background-position: -160px -160px;}
+#pic2_20 {background-position: -240px -160px;}
+#pic2_21 {background-position: -320px -160px;}
+#pic2_22 {background-position: -400px -160px;}
+#pic2_23 {background-position: -480px -160px;}
+#pic2_24 {background-position: -560px -160px;}
+#pic2_25 {background-position: 0px -240px;}
+#pic2_26 {background-position: -80px -240px;}
+#pic2_27 {background-position: -160px -240px;}
+#pic2_28 {background-position: -240px -240px;}
+#pic2_29 {background-position: -320px -240px;}
+#pic2_30 {background-position: -400px -240px;}
+#pic2_31 {background-position: -480px -240px;}
+#pic2_32 {background-position: -560px -240px;}
+#pic2_33 {background-position: 0px -320px;}
+#pic2_34 {background-position: -80px -320px;}
+#pic2_35 {background-position: -160px -320px;}
+#pic2_36 {background-position: -240px -320px;}
+#pic2_37 {background-position: -320px -320px;}
+#pic2_38 {background-position: -400px -320px;}
+#pic2_39 {background-position: -480px -320px;}
+#pic2_40 {background-position: -560px -320px;}
+#pic2_41 {background-position: 0px -400px;}
+#pic2_42 {background-position: -80px -400px;}
+#pic2_43 {background-position: -160px -400px;}
+#pic2_44 {background-position: -240px -400px;}
+#pic2_45 {background-position: -320px -400px;}
+#pic2_46 {background-position: -400px -400px;}
+#pic2_47 {background-position: -480px -400px;}
+#pic2_48 {background-position: -560px -400px;}
+#pic2_49 {background-position: 0px -480px;}
+#pic2_50 {background-position: -80px -480px;}
+#pic2_51 {background-position: -160px -480px;}
+#pic2_52 {background-position: -240px -480px;}
+#pic2_53 {background-position: -320px -480px;}
+#pic2_54 {background-position: -400px -480px;}
+#pic2_55 {background-position: -480px -480px;}
+#pic2_56 {background-position: -560px -480px;}
+#pic2_57 {background-position: 0px -560px;}
+#pic2_58 {background-position: -80px -560px;}
+#pic2_59 {background-position: -160px -560px;}
+#pic2_60 {background-position: -320px -560px;}
+#pic2_61 {background-position: -400px -560px;}
+#pic2_62 {background-position: -480px -560px;}
+#pic2_63 {background-position: -560px -560px;}
+#fifteen2 #empty {border: none; background: none;}
+/*注意此处应为fifteen2*/
+
+
+
+/*原始数据*/
+/*#pic1 {background-position: -0px 0px;}*/
+/*#pic2 {background-position: -88px 0px;}*/
+/*#pic3 {background-position: -176px 0px;}*/
+/*#pic4 {background-position: -264px 0px;}*/
+/*#pic5 {background-position: 0px -88px;}*/
+/*#pic6 {background-position: -88px -88px;}*/
+/*#pic7 {background-position: -176px -88px;}*/
+/*#pic8 {background-position: -264px -88px;}*/
+/*#pic9 {background-position: 0px -176px;}*/
+/*#pic10 {background-position: -88px -176px;}*/
+/*#pic11 {background-position: -176px -176px;}*/
+/*#pic12 {background-position: -264px -176px;}*/
+/*#pic13 {background-position: 0px -264px;}*/
+/*#pic14 {background-position: -88px -264px;}*/
+/*#pic15 {background-position: -176px -264px;}*/
+/*#fifteen #empty {border: none; background: none;}*/
+
+
+
+
+
+/*美化select*/
+
+
+
+.select1 {
+    background: rgba(175, 225, 226, 0.74);/*背景色和透明度，可以设置为url地址的图片*/
+    width: 208px;/*宽度*/
+    height: 50px;/*高度*/
+    margin-top: 10px;/*上边距*/
+    margin-left: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+select{
+    background: transparent;/*透明*/
+    border: none;
+    padding-left: 10px;
+    width: 300px;/*比上面设置的略宽*/
+    height: 100%;
+    border-radius: 10px;
+    color: rgba(239, 92, 20, 0.88);
+    font-family: "微软雅黑";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*按钮美化*/
+a.animated-button:link, a.animated-button:visited {
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 15px;
+    color: #fff;
+    font-size:14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    border-radius: 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 150%;
+    z-index: -1;
+    -webkit-transition: all 0.75s ease 0s;
+    -moz-transition: all 0.75s ease 0s;
+    -o-transition: all 0.75s ease 0s;
+    transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+    color: #FFF;
+    text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+    height: 450%;
+}
+a.animated-button:link, a.animated-button:visited {
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 15px;
+    color: #000;
+    font-size:25px;
+    border-radius: 0;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+/* Victoria Buttons */
+a
+{
+    width: 200px;
+    height: 50px;
+}
+a.animated-button.victoria-one {
+    border: 2px solid #D24D57;
+}
+a.animated-button.victoria-one:after {
+    background: #D24D57;
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+    transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+}
+a.animated-button.victoria-two {
+    border: 2px solid #D24D57;
+}
+a.animated-button.victoria-two:after {
+    background: #D24D57;
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    transform: translateX(-50%) translateY(-50%) rotate(25deg);
+}
+a.animated-button.victoria-three {
+    border: 2px solid #D24D57;
+}
+a.animated-button.victoria-three:after {
+    background: #D24D57;
+    opacity: .5;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+a.animated-button.victoria-three:hover:after {
+    height: 140%;
+    opacity: 1;
+}
+a.animated-button.victoria-four {
+    border: 2px solid #D24D57;
+}
+a.animated-button.victoria-four:after {
+    background: #D24D57;
+    opacity: .5;
+    -moz-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+    -ms-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+    transform: translateY(-50%) translateX(-50%) rotate(90deg);
+}
+a.animated-button.victoria-four:hover:after {
+    opacity: 1;
+    height: 600% !important;
+}
+a.animated-button.victoria-five {
+    border: 2px solid red;
+}
+a.animated-button.victoria-five:after {
+    background: #D24D57;
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+    transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+}

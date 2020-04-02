@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<h1>拼图游戏</h1>
+<div class="main">
+<!--    左边部分-->
+    <div class="left">
+        <h3>目标图片</h3>
+        <img src="p1.jpg" id="smallpic"><br/>
+        <label>时间：</label><span id="time">00:00</span>
+        <label>步数：</label><span id="step">0</span><br/>
+        <select class="select1">
+<!--            value的值表示送往服务器的值-->
+            <option  value="1">简单</option>
+            <option selected="selected" value="2">中等</option>
+            <option value="3">困难</option>
+        </select>
+        <button id="restart">重新开始</button>
+    </div>
+<!--    中间部分-->
+    <div class="center" id="fifteen">
+
+    </div>
+<!--    右边部分-->
+    <div class="right">
+<!--        <a href="javascript:startgame()" class="btn btn-sm animated-button victoria-one">start</a>-->
+        <a href="index.html" class="btn btn-sm animated-button victoria-one" id="level1">🌶 4x4</a>
+        <a href="index2.html" class="btn btn-sm animated-button victoria-two" id="level2">中级 8x8</a>
+        <a href="index2.html" class="btn btn-sm animated-button victoria-three" id="level3">高级 16x16</a>
+        <a href="index.html" class="btn btn-sm animated-button victoria-four" id="level4">😈 nxn</a>
+    </div>
+</div>
+
+
+</body>
+</html>
